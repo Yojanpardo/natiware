@@ -1,10 +1,10 @@
 from django.db import models
-from django.utils import timezone
 
 # Create your models here.
 
-class usuario(models.Model):
+class Usuario(models.Model):
     name = models.CharField(max_length=15, unique=True)
+    password = models.CharField(max_length=30)
     rol = models.CharField(max_length=30)
     phone = models.CharField(max_length=11)
     email = models.CharField(max_length=30)
